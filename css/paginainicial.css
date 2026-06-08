@@ -104,7 +104,7 @@ header {
     padding: 120px 20px 60px 20px; 
     /* radial-gradient: Cria um fundo esfumaçado em círculo. Começa com roxo 
        no canto superior direito e clareia em direção às outras extremidades. */
-    background: radial-gradient(circle at top right, #aca4e0, #9c8adb);
+    background: radial-gradient(circle at top right, #eeeef0, #9c8adb);
 }
 
 .hero-content {
