@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    width:auto;
+    background-color: #c8b6f3;
+    margin: 0;
+}
+
+#logoimg{
+  width: 300px;         /* Ajuste o tamanho conforme necessário */
+  height: auto;        /* Mantém a proporção da imagem */
+  margin-bottom: 20px; /* Cria o espaçamento entre a logo e o círculo */
+  align-self: center; /* Centraliza a imagem horizontalmente */
+  justify-self: center; /* Centraliza a imagem horizontalmente */
+  display: block; /* Garante que a imagem seja tratada como um bloco para centralização */
+  position:absolute;
+  top: 20px; /* Ajuste a posição vertical conforme necessário */ 
+  left: 43%; /* Centraliza horizontalmente */
+}
+
+#crono{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3f4f8; 
+    padding: 2rem;
+    border-radius: 10px;
+    width: 280px;
+ 
+}
+
+#timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f8; 
+    height: 250px;
+    width: 250px;
+    border: 3px solid #5b46e8;
+    border-radius: 100%;
+    font-weight: 600;
+    font-size: 40px;
+    color: #5b46e8;
+    margin-bottom: 1.5rem;
+    padding: 4rem;
+}
+
+#actions{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#actions button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    height: 40px;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #5b46e8;
+    color: #f3f4f8;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+#actions button:hover{
+    background-color: #c4b5fd;
+    
+}
