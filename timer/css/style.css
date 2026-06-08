@@ -24,7 +24,7 @@ body{
   display: block; /* Garante que a imagem seja tratada como um bloco para centralização */
   position:absolute;
   top: 20px; /* Ajuste a posição vertical conforme necessário */ 
-  left: 43%; /* Centraliza horizontalmente */
+  left: 42.5%; /* Centraliza horizontalmente */
 }
 
 #crono{
