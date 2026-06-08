@@ -1,0 +1,166 @@
+/* ==========================================================================
+   1. Ajustes iniciais
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: Altera o cálculo do tamanho do elemento. O valor 'border-box' 
+       garante que paddings e borders fiquem DENTRO do tamanho total definido, 
+       impedindo que caixas quebrem o layout ao adicionar espaçamento. */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #c8b6f3; 
+    color: #0f172a; 
+    /* min-height: Define que o corpo do site terá, no mínimo, a altura total da 
+       tela visível (100vh = 100% da viewport height), ideal para fundos preenchidos. */
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    /* transition: Cria animações suaves ao mudar propriedades no :hover. 
+       O 'ease-in-out' faz a transição começar devagar, acelerar e terminar devagar. */
+    transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (header, .logo, nav, .btn-login)
+   ========================================================================== */
+header {
+    /* Flexbox: Alinha os filhos em linha, joga o primeiro para a extrema esquerda 
+       e o último para a extrema direita (space-between), e os centraliza na vertical. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0; 
+    /* position: fixed: Fixa o elemento na tela. Ele não se move quando você rola a página.
+       'top: 0' e 'left: 0' grudam ele no topo esquerdo. 
+       'z-index: 100' funciona como uma "camada", garantindo que ele flutue por cima de tudo. */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    /* gap: Cria um espaçamento automático fixo apenas ENTRE os elementos filhos 
+       (no caso, a imagem e o texto), sem precisar usar margins individuais. */
+    gap: 10px;           
+    font-size: 22px;
+    font-weight: 800;
+    color: #5b46e8;
+    letter-spacing: 1.5px;
+}
+
+.logo img {
+    height: 40px;        
+    width: auto;         
+    /* object-fit: contain: Força a imagem a se adaptar à altura de 40px mantendo 
+       sua proporção original, sem esticar, achatar ou distorcer o logotipo. */
+    object-fit: contain;
+}
+
+/* nav a {
+    color: #475569; 
+    font-weight: 500;
+    margin: 0 15px;
+} */
+
+/* nav a:hover {
+    color: #6366f1; 
+} */
+
+.btn-login {
+    color: #5b46e8;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 2px solid #5b46e8;
+    border-radius: 6px;
+}
+
+.btn-login:hover {
+    background-color: #5b46e8;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. SEÇÃO PRINCIPAL (.hero, .hero-content, .tag, h1, p, .btn-principal)
+   ========================================================================== */
+.hero {
+    min-height: 100vh;
+    /* Flexbox centralizador: A combinação abaixo centraliza perfeitamente 
+       o bloco de conteúdo no meio exato da tela (tanto na vertical quanto horizontal). */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px 20px; 
+    /* radial-gradient: Cria um fundo esfumaçado em círculo. Começa com roxo 
+       no canto superior direito e clareia em direção às outras extremidades. */
+    background: radial-gradient(circle at top right, #aca4e0, #9c8adb);
+}
+
+.hero-content {
+    text-align: center;
+    /* max-width: Define o tamanho máximo horizontal do bloco de texto. 
+       Se a tela for gigante, o texto para de esticar ao atingir 700px. */
+    max-width: 700px;
+}
+
+.tag {
+    /* inline-block: Permite que um elemento originalmente em linha (como o span) 
+       aceite propriedades de bloco, como paddings internos e margins verticais. */
+    display: inline-block;
+    background-color: #d6c9f7; 
+    color: #5b46e8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 800;
+    /* line-height: Controla o espaçamento vertical entre as linhas de um mesmo parágrafo. 
+       O valor 1.2 é excelente para títulos grandes não ficarem muito afastados. */
+    line-height: 1.2;
+    color: #0d1326;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #2f3741;
+    line-height: 1.6; /* Linha mais espaçada para textos longos, melhorando a leitura. */
+    margin-bottom: 35px;
+}
+
+/* .btn-principal {
+    display: inline-block;
+    background-color: #7b49f1;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    /* box-shadow: Adiciona sombra. Os 3 primeiros valores controlam posição horizontal, 
+       vertical e o desfoque. O quarto valor aplica cor com transparência (rgba).
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); 
+} */
+
+.btn-principal:hover {
+    background-color: #5b46e8;
+    /* transform: translateY: Move o botão fisicamente no eixo vertical. 
+       Valores negativos (-2px) jogam o elemento para cima, simulando um efeito físico de clique/foco. */
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+}

@@ -1,0 +1,146 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+} 
+
+body { 
+    background-color: #c8b6f3; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+} 
+
+/* O card principal agora é um container Flex de duas colunas */
+.login-card { 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 800px; 
+    display: flex;
+    /* overflow: hidden: Esconde qualquer conteúdo que tente "vazar" para fora 
+       das bordas arredondadas. Sem isso, a imagem colada no canto esquerdo 
+       perderia o efeito do border-radius: 10px e ficaria com pontas quadradas. */
+    overflow: hidden; 
+} 
+
+/* Coluna da Imagem (Esquerda) */
+.login-sidebar {
+    /* flex: 1.5: Distribui o espaço proporcionalmente. Significa que a coluna 
+       da imagem será um pouco maior (ganha proporção 1.5) do que a do formulário (que tem flex: 1). */
+    flex: 1.5; 
+    display: flex;
+}
+
+.login-sidebar img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover: Comportamento fundamental para imagens de tela cheia ou banners. 
+       Faz a imagem preencher todo o espaço disponível cortando os excessos, 
+       mas sem esmagar ou distorcer a proporção do desenho original. */
+    object-fit: cover; 
+    display: block;
+}
+
+/* Coluna do Formulário (Direita) */
+.login-content {
+    flex: 1; /* Ocupa um espaço menor na proporção em comparação à imagem */
+    padding: 40px; 
+    display: flex;
+    /* flex-direction: column: Altera o eixo do Flexbox. Em vez de empilhar 
+       as coisas de lado (linha), faz com que fiquem uma abaixo da outra (coluna). */
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 { 
+    text-align: center; 
+    color: #5b46e8; 
+    margin-bottom: 25px; 
+} 
+
+.input-group { 
+    margin-bottom: 20px; 
+} 
+
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: #555555; 
+    font-size: 0.9em; 
+} 
+
+/* Seletor de Atributo: Aplica a estilização apenas nas caixas de input que possuírem 
+   exatamente o type="email" ou type="password". Inputs do tipo "checkbox", por exemplo, 
+   são completamente ignorados por essa regra, protegendo o layout de quebras. */
+input[type="email"], input[type="password"] { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #cccccc; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    /* outline: none: Remove a borda preta ou azul padrão que os navegadores colocam 
+       automaticamente ao redor de caixas de texto quando são selecionadas. */
+    outline: none; 
+    transition: border-color 0.3s; 
+} 
+
+/* :focus: Pseudo-classe de estado. Aplica as regras de CSS somente quando o usuário 
+   clica dentro do campo e começa a digitar, dando um feedback visual de seleção ativa. */
+input[type="email"]:focus, input[type="password"]:focus { 
+    border-color: #db71f5; 
+} 
+
+.opcoes-linhas { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-size: 0.85em; 
+    margin-bottom: 20px; 
+} 
+
+/* Seletor Composto Descendente: Modifica apenas as tags <label> que estiverem 
+   exclusivamente DENTRO de um container com a classe .opcoes-linhas. Os outros 
+   labels gerais do formulário continuam intocados. */
+.opcoes-linhas label { 
+    display: inline; 
+    margin-bottom: 0; 
+} 
+
+.opcoes-linhas a { 
+    color: #5b46e8; 
+    text-decoration: none; 
+} 
+
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background-color: #5b46e8; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    /* cursor: pointer: Altera o cursor do mouse para aquela "mãozinha" clássica 
+       de clique, indicando visualmente que o botão é interativo. */
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+} 
+
+button:hover { 
+    background-color: #5b46e8; 
+} 
+
+.registro-link { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 0.85em; 
+} 
+
+.registro-link a { 
+    color: #5b46e8; 
+    text-decoration: none; 
+    font-weight: bold; 
+}

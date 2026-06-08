@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login-imagem.css">
+</head>
+<body>
+<!-- .login-card: Excelente escolha estrutural. Agrupar os dois lados (imagem e form) 
+     em um bloco pai facilita o uso de Flexbox/Grid para dividi-los meio a meio no CSS. -->
+<div class="login-card"> 
+    
+    <!-- Lado Esquerdo: Imagem -->
+    <div class="login-sidebar">
+        <img src="img/logotipo.jpeg" alt="Imagem de Login">
+    </div>
+
+    <!-- Lado Direito: Formulário -->
+    <div class="login-content">
+        <h2>Acesse sua conta</h2> 
+    
+        <form method="POST"> 
+                 <!-- .input-group: Bloco utilitário padrão na indústria. Organiza verticalmente 
+                 o par formado por uma legenda (label) e seu respectivo campo de preenchimento. -->
+            <div class="input-group"> 
+                <!-- 'for="iemail"' aponta diretamente para o 'id="iemail"' -->
+                <label for="iemail">E-mail</label> 
+                <input type="email" id="iemail" name="email" placeholder="exemplo@email.com" required> 
+            </div> 
+            
+            <div class="input-group"> 
+                <label for="ipassword">Senha</label> 
+                <input type="password" id="ipassword" name="password" placeholder="Digite sua senha" required> 
+            </div> 
+            
+            <div class="opcoes-linhas"> 
+                <div> 
+                    <!-- type="checkbox": Caixa de seleção binária (marcado/desmarcado). 
+                         O label associado aqui também serve como área de clique para ativar a caixa. -->
+                    <input type="checkbox" id="irelembrar" name="relembrar"> 
+                    <label for="irelembrar">Lembrar-me</label> 
+                </div> 
+                <a href="/recuperar-senha.html">Esqueceu a senha?</a> 
+            </div> 
+            <button type="submit">Acessar</button> 
+        </form> 
+        
+        <div class="registro-link"> 
+            Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a> 
+        </div> 
+    </div>
+</div>
+</body>
+</html>

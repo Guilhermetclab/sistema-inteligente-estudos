@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #c8b6f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* max-width: 400px: Essencial para o reaproveitamento. Limitando o card a 400px 
+       (em vez dos 800px da versão com imagem), ele ganha um visual centralizado e compacto.*/
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color:  #5b46e8;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555555;
+    font-size: 0.9em;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #db71f5;
+}
+
+.opcoes-linhas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+/* .options-row: Um detalhe de código legado ou inativo. Esta classe não existe 
+   no seu HTML de recuperar senha (que usa apenas a classe .opcoes-linhas). 
+   Ela não quebra o site, mas o CSS inserido aqui simplesmente não é aplicado na tela. */
+.options-row label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.options-row a {
+    color:  #5b46e8;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color:  #5b46e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    /* Mesmo valor de cor: No momento, passar o mouse no botão não altera a cor de fundo 
+       dele porque o background-color do hover está idêntico ao original (#8657f3). 
+       Para gerar um feedback de clique, o ideal seria escurecer ou clarear um pouco aqui. */
+    background-color: #5b46e8;
+}
+
+.registro-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85em;
+}
+
+.registro-link a {
+    color: #5b46e8;
+    text-decoration: none;
+    font-weight: bold;
+}
